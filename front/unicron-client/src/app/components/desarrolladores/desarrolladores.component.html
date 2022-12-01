@@ -1,0 +1,29 @@
+<div class="title-container">
+    <h1>Desarrolladores</h1>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" *ngFor="let desarrollador of desarrolladores">
+                <div class="card">
+                    <img class="card-img-top cardimg" alt="..."
+                        [src]="desarrollador['foto']"
+                        data-holder-rendered="true">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                Nombre: {{ desarrollador['nombre'] }}
+                            </li>
+                            <li>
+                                Carnet: {{ desarrollador['carnet'] }}
+                            </li>
+                            <li>
+                                Curso: Redes de Computadoras 2
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

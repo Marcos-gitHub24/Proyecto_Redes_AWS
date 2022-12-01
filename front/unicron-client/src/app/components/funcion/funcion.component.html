@@ -1,0 +1,57 @@
+<div class="title-container">
+    <h1>Función Pública</h1>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-sm-6" *ngFor="let funcion of funciones">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <div class="center-vert">
+                                <img [src]="funcion['Foto']" class="img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ funcion['Nombre'] }}</h5>
+                                <p class="card-text">{{ funcion['Descripcion'] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <div style="display: flex; align-content: center; justify-content: center; height: 100px;">
+                        <div style="width: 80%; overflow-y: auto;">
+                            <h4>{{ noticiaInicial['noticia'] }}</h4>
+                            <p>{{ noticiaInicial['descripcion'] }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000" *ngFor="let noticia of noticias; let i = index;">
+                    <div style="display: flex; align-content: center; justify-content: center; height: 100px;">
+                        <div style="width: 80%; overflow: scroll;">
+                            <h5>{{ noticia['noticia'] }}</h5>
+                            <p>{{ noticia['descripcion'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>

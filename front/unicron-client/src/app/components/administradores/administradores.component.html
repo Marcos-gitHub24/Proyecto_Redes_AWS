@@ -1,0 +1,20 @@
+<div class="title-container">
+    <h1>Administradores</h1>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" *ngFor="let admin of administradores">
+                <div class="card">
+                    <img class="card-img-top cardimg" alt="..."
+                        [src]="admin['foto']"
+                        data-holder-rendered="true">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ admin['puesto'] }}</h5>
+                        <p class="card-text">{{ admin['descripcion'] }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

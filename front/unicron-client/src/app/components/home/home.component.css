@@ -1,0 +1,10 @@
+.slide-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-photo img {
+    width: 800px;
+    height: 450px;
+}
